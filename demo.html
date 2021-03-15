@@ -6,6 +6,7 @@
 
         <script>
             $(document).ready(function(){
+                var timer;
                 $("button").click(function(){
                     if(sessionStorage.clicks) {
                         sessionStorage.clicks = Number(sessionStorage.clicks) + 1;
@@ -14,23 +15,26 @@
                     }
                     document.getElementById("result").innerHTML = "You have clicked the button " 
                     + sessionStorage.clicks + " time(s) in this session.";
-                });
-            });
-        </script>
-
-        <script>
-            setInterval(function(){
-                if ($("button").is(":hover")){
-                    if(sessionStorage.hovertime) {
+                }).hover(
+                function (){
+                    sessionStorage.hovertime = 0;
+                    document.getElementById("result2").innerHTML = sessionStorage.hovertime + " ms";
+                    
+                    timer = setInterval(function(){
+                    if (sessionStorage.hovertime) {
                         sessionStorage.hovertime = Number(sessionStorage.hovertime) + .2;
                     } else {
-                        sessionStorage.hovertime = 0.2;
+                        sessionStorage.hovertime = .2;
                     }
-                    document.getElementById("result2").innerHTML = "You have hovered the button for "
-                    + sessionStorage.hovertime + " seconds in this session.";
-                }
-            }, 200);
+                    document.getElementById("result2").innerHTML = sessionStorage.hovertime + " ms";
+                    }, 200);
+                },
+                
+                function(){clearInterval(timer)}); 
+            })
         </script>
+
+        
     </head>
 
 
