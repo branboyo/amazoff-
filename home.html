@@ -6,14 +6,19 @@
     <style>
     .btxt{
         top-align: 50%;
-
     }
     .grid-container {
         display: grid;
-        grid-template-columns: 80px 200px auto 30px;
-        grid-gap: 10px;
-        background-color: #2196F3;
-        padding: 10px;
+        grid-template-columns: auto auto auto auto auto;
+        background-color: white;
+        grid-gap: 3%;
+        padding: 2%;
+        padding-botton: 1.5%; 
+    }
+    .grid-container > div {
+        background-color: #bdb6a3;
+        text-align: center;
+        padding: 5%; 
     }
     h1{
         text-align: center;
@@ -40,11 +45,13 @@
         <div class="container-fluid bg-primary text-white" style = "height: 6vw">
             <h1 style = "top-align 50%;">Amazoff</h1>
         </div>
-        <div class = "container-md bg-primary text-white ">Daniel</div>
-        <div class = "container bg-primary text-white">Is</div>
-        <div class = "container bg-primary text-white">Hella</div>
-        <div class = "container bg-primary text-white">Gay</div>
-        <div class = "container bg-primary text-white">fr</div>
+        <div class="grid-container">
+            <div class="grid-item">Daniel</div>
+            <div class="grid-item">Is</div>
+            <div class="grid-item">Hella</div>
+            <div class="grid-item">Gay</div>
+            <div class="grid-item">Fr</div>
+        </div>
     </body>
 
 </html>
