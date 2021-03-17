@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                var timer;
+                $("button").click(function(){
+                    if(sessionStorage.clicks) {
+                        sessionStorage.clicks = Number(sessionStorage.clicks) + 1;
+                    } else {
+                        sessionStorage.clicks = 1;
+                    }
+                    document.getElementById("result").innerHTML = "You have clicked the button " 
+                    + sessionStorage.clicks + " time(s) in this session.";
+                }).hover(
+                function (){
+                    sessionStorage.hovertime = 0;
+                    document.getElementById("result2").innerHTML = sessionStorage.hovertime + " ms";
+                    
+                    timer = setInterval(function(){
+                    if (sessionStorage.hovertime) {
+                        sessionStorage.hovertime = Number(sessionStorage.hovertime) + .2;
+                    } else {
+                        sessionStorage.hovertime = .2;
+                    }
+                    document.getElementById("result2").innerHTML = sessionStorage.hovertime + " ms";
+                    }, 200);
+                },
+                
+                function(){clearInterval(timer)}); 
+            })
+        </script>
+
+        
+    </head>
+
+
+    <body>
+        
+        <h1>My first heading</h1>
+        <div id="result"></div>
+        <div id="result2"></div>
+        <button> BUTTON1 </button>
+    </body>
+</html>
