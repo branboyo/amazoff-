@@ -5,3 +5,10 @@ from django.http import HttpResponse
 
 def home_view(request,*args, **kwargs):
     return render(request, "home.html", {})
+
+def electronics_view(request,*args, **kwargs):
+    context = {
+        "Category": "Electronics",
+        "Title": "Amazoff: Electronics Catalog"
+    }
+    return render(request, 'category.html', context)
