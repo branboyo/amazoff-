@@ -5,6 +5,8 @@
 
     <head>
 
+        {%include 'libraries.html'%}
+
         <style>
             #carousel1 {
                 margin-left: 50px;
@@ -30,12 +32,36 @@
             }
         </style>
     
-        {%include 'libraries.html'%}
+        <script>
+            $(document).ready(function(){
+                var timer;
+
+                $("#dicks").hover(
+                    function(){
+                        sessionStorage.hovertime = 0;
+                        document.getElementById("result").innerHTML = sessionStorage.hovertime + " ms";
+                    
+                        timer = setInterval(function(){
+                        if (sessionStorage.hovertime) {
+                            sessionStorage.hovertime = Number(sessionStorage.hovertime) + .2;
+                        } else {
+                            sessionStorage.hovertime = .2;
+                        }
+                        document.getElementById("result").innerHTML = sessionStorage.hovertime + " ms";
+                        }, 200);
+                    }, 
+
+                    function(){clearInterval(timer)}
+                );
+            });
+        </script>
 
     </head>
 
     <body>
     {% include 'heading.html' %}
+
+        <div id="result"></div>
 
         <div class="container">
             
@@ -43,11 +69,11 @@
             <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="row"> 
-                    <div class="col-md-3 clearfix d-none d-md-block">
+                    <div id="dicks" class="col-md-3 clearfix d-none d-md-block">
                         <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">banana</h4>
+                            <h4 class="card-title">dicks</h4>
                             <p class="card-text">$0.1</p>
                         </div>
                     </div>
