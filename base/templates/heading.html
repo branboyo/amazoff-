@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+    display: grid;
+    grid-template-columns: 17.5% 17.5% 17.5% 17.5% 17.5%;
+    grid-gap: 3%;
+    padding: 2%;
+    padding-bottom: 1.5%; 
+}
+.grid-container > div {
+    background-color: #616161;
+    text-align: center;
+    padding: 5%; 
+    font-size: 120%;
+    font-weight: bold;
+    color: white;
+}
+h1 {
+    text-align: center;
+    padding-top: 1.25%;
+    font-weight: bold;       
+}
+</style>
+</head>
+
+<body>
+    <div class="container-fluid bg-primary text-white" style = "height: 6vw">
+        <h1 style="top-align: 50%;"><a href = '/' style = "text-decoration:none; color: white">Amazoff</a></h1>
+    </div>
+    <div class="grid-container">
+        <div onclick="location.href='/electronics/';" style="cursor:pointer;" class="grid-item">Electronics</div>
+        <div onclick="location.href='/groceries/';" style="cursor:pointer;" class="grid-item">Groceries</div>
+        <div onclick="location.href='/furnitures/';" style="cursor:pointer;" class="grid-item">Furnitures</div>
+        <div onclick="location.href='/cleaning_products/';" style="cursor:pointer;" class="grid-item">Cleaning</div>
+        <div onclick="location.href='/office_supplies/';" style="cursor:pointer;" class="grid-item">Office</div>
+    </div>
+<body>
+
+</html>
