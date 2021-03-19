@@ -1,10 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from items.models import Item
 
 # Create your views here.
 
 def home_view(request,*args, **kwargs):
-    return render(request, "home.html", {})
+    context = {
+        "item1": Item.objects.get(id = 1)
+    }
+    return render(request, "home.html", context)
 
 def electronics_view(request,*args, **kwargs):
     context = {
