@@ -6,7 +6,7 @@ from items.models import Item
 
 def home_view(request,*args, **kwargs):
     context = {
-        "item1": Item.objects.get(id = 1)
+        "item1": Item.objects.get(id=1)
     }
     return render(request, "home.html", context)
 
