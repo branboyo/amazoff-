@@ -75,6 +75,19 @@
                     else if (navigator.userAgent.search("Edge") >= 0) {
                         console.log("Edge")
                     }
+                    $.ajax({
+                        dataType: 'json',
+                        url: 'http://api.hostip.info/get_json.php',
+                        success: function(data) {
+                            var $ip = data['ip'],
+                                $city = data['city'],
+                                $countryCode = data['country_code'],
+                                $countryName = data['country_name'];
+                            console.log($ip)
+                            //Only works when adblock is off, can check in inspect element
+                        }
+                        
+                    });
         </script>
 
     </head>
