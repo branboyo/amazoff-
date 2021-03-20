@@ -54,6 +54,27 @@
                     function(){clearInterval(timer)}
                 );
             });
+                    if (navigator.userAgent.search("MSIE") >= 0) {
+                        console.log("MSIE")
+                    }
+                    else if (navigator.userAgent.search("Chrome") >= 0) {
+                        console.log("Chrome")
+                    }
+                    else if (navigator.userAgent.search("Firefox") >= 0) {
+                        console.log("Firefox")
+                    }
+                    else if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+                        console.log("Safari")
+                    }
+                    else if (navigator.userAgent.search("Opera") >= 0) {
+                        console.log("Opera")
+                    }
+                    else if (navigator.userAgent.search("NET") >= 0) {
+                        console.log("NET")
+                    }
+                    else if (navigator.userAgent.search("Edge") >= 0) {
+                        console.log("Edge")
+                    }
         </script>
 
     </head>
