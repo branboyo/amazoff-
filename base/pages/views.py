@@ -45,39 +45,47 @@ def home_view(request,*args, **kwargs):
     }
     return render(request, "home.html", context)
 
-def electronics_view(request,*args, **kwargs):
+def produce_view(request,*args, **kwargs):
     itemlist = Item.objects.filter(description = "produce")
     context = {
-        "Category": "Electronics",
-        "Title": "Amazoff: Electronics Catalog",
+        "Category": "Produce",
+        "Title": "Amazoff: Produce Section",
         "list": itemlist,
     }
     return render(request, 'category.html', context)
 
-def groceries_view(request,*args, **kwargs):
+def meat_view(request,*args, **kwargs):
+    itemlist = Item.objects.filter(description = "meat")
     context = {
-        "Category": "Groceries",
-        "Title": "Amazoff: Groceries Catalog"
+        "Category": "Meat",
+        "Title": "Amazoff: Meat Section",
+        "list": itemlist,
     }
     return render(request, 'category.html', context)
 
-def furnitures_view(request,*args, **kwargs):
+def seafood_view(request,*args, **kwargs):
+    itemlist = Item.objects.filter(description = "seafood")
     context = {
-        "Category": "Furnitures",
-        "Title": "Amazoff: Furnitures Catalog"
+        "Category": "Seafood",
+        "Title": "Amazoff: Seafood Section",
+        "list": itemlist,
     }
     return render(request, 'category.html', context)
 
-def cleaning_products_view(request,*args, **kwargs):
+def pantry_view(request,*args, **kwargs):
+    itemlist = Item.objects.filter(description = "pantry")
     context = {
-        "Category": "Cleaning Products",
-        "Title": "Amazoff: Cleaning Products Catalog"
+        "Category": "Pantry",
+        "Title": "Amazoff: Pantry Section",
+        "list": itemlist,
     }
     return render(request, 'category.html', context)
 
-def office_supplies_view(request,*args, **kwargs):
+def bakery_view(request,*args, **kwargs):
+    itemlist = Item.objects.filter(description = "bakery")
     context = {
-        "Category": "Office Supplies",
-        "Title": "Amazoff:  Office Supplies Catalog"
+        "Category": "Bakery",
+        "Title": "Amazoff:  Bakery Section",
+        "list": itemlist,
     }
     return render(request, 'category.html', context)

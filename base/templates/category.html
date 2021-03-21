@@ -11,6 +11,45 @@
         background-color: #faf3eb !important;
     }
     </style>
+
+
+        <script>
+        
+                    if (navigator.userAgent.search("MSIE") >= 0) {
+                        console.log("MSIE")
+                    }
+                    else if (navigator.userAgent.search("Chrome") >= 0) {
+                        console.log("Chrome")
+                    }
+                    else if (navigator.userAgent.search("Firefox") >= 0) {
+                        console.log("Firefox")
+                    }
+                    else if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+                        console.log("Safari")
+                    }
+                    else if (navigator.userAgent.search("Opera") >= 0) {
+                        console.log("Opera")
+                    }
+                    else if (navigator.userAgent.search("NET") >= 0) {
+                        console.log("NET")
+                    }
+                    else if (navigator.userAgent.search("Edge") >= 0) {
+                        console.log("Edge")
+                    }
+                    $.ajax({
+                        dataType: 'json',
+                        url: 'http://api.hostip.info/get_json.php',
+                        success: function(data) {
+                            var $ip = data['ip'],
+                                $city = data['city'],
+                                $countryCode = data['country_code'],
+                                $countryName = data['country_name'];
+                            console.log($ip)
+                            //Only works when adblock is off, can check in inspect element
+                        }
+                        
+                    });
+        </script>
     </head>
 
     <body> 
@@ -18,13 +57,13 @@
     {% include 'heading.html' %}
     
     <h1 style  = "text-align: center; font-family: Arial, sans-serif,"> {{Category}}</h1>
-    <h1>{{list.0.name}}</h1>
-    {% include 'catalog.html' %}
+    <div id="result"></div>
+    {% include 'catalog.html' with idn1="im1" idn2="im2" idn3="im3" idn4="im4" i1=list.0 i2=list.1 i3=list.2 i4=list.3%}
 
-    {% include 'catalog.html' %}
+    {% include 'catalog.html' with idn1="im5" idn2="im6" idn3="im7" idn4="im8" i1=list.4 i2=list.5 i3=list.6 i4=list.7%}
 
-    {% include 'catalog.html' %}
+    {% include 'catalog.html' with idn1="im9" idn2="im10" idn3="im11" idn4="im12" i1=list.8 i2=list.9 i3=list.10 i4=list.11%}
 
-    {% include 'catalog.html' %}
+    {% include 'catalog.html' with idn1="im13" idn2="im14" idn3="im15" idn4="im16" i1=list.12 i2=list.13 i3=list.14 i4=list.15%}
     </body>
 </html>

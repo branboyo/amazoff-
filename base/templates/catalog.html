@@ -1,3 +1,12 @@
+<head>
+<script>
+{%include 'scripts/hover.js' with num=idn1 itemid=i1.id%}
+{%include 'scripts/hover.js' with num=idn2 itemid=i2.id%}
+{%include 'scripts/hover.js' with num=idn3 itemid=i3.id%}
+{%include 'scripts/hover.js' with num=idn4 itemid=i4.id%}
+</script>
+</head>
+
 <style>
 .card-img-top:hover{
     opacity: 0.5;
@@ -5,48 +14,53 @@
 }
 </style>
 
+<body>
+
+   </style>
+   
     <div class="container">     
-        <div id="carousel1" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div id= "carousel-" class="carousel slide" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="row"> 
-                    <div id= "dicks" class="col-md-3 clearfix d-none d-md-block">
-                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                    <div id={{idn1}} class="col-md-3 clearfix d-none d-md-block">
+                        <img class="card-img-top" src={{i1.image}}
                             alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">banana</h4>
-                            <p class="card-text">$0.1</p>
+                            <h4 class="card-title">{{i1.name}}</h4>
+                            <p class="card-text">${{i1.price}}</p>
                         </div>
                     </div>
 
-                    <div class="col-md-3 clearfix d-none d-md-block">
-                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                    <div id={{idn2}} class="col-md-3 clearfix d-none d-md-block">
+                        <img class="card-img-top" src={{i2.image}}
                             alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">banana</h4>
-                            <p class="card-text">$0.1</p>
+                            <h4 class="card-title">{{i2.name}}</h4>
+                            <p class="card-text">${{i2.price}}</p>
                         </div>
                     </div>
 
-                    <div class="col-md-3 clearfix d-none d-md-block">
-                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                    <div id={{idn3}} class="col-md-3 clearfix d-none d-md-block">
+                        <img class="card-img-top" src={{i3.image}}
                             alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">banana</h4>
-                            <p class="card-text">$0.1</p>
+                            <h4 class="card-title">{{i3.name}}</h4>
+                            <p class="card-text">${{i3.price}}</p>
                         </div>
                     </div>
 
-                    <div class="col-md-3 clearfix d-none d-md-block">
-                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                    <div id={{idn4}} class="col-md-3 clearfix d-none d-md-block">
+                        <img class="card-img-top" src={{i4.image}}
                             alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">banana</h4>
-                            <p class="card-text">$0.1</p>
+                            <h4 class="card-title">{{i4.name}}</h4>
+                            <p class="card-text">${{i4.price}}</p>
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
             </div>
         </div>
     </div>
+</body>
