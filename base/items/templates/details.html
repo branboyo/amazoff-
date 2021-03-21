@@ -5,14 +5,39 @@
 {%include 'heading.html'%}
 {%include 'libraries.html'%}
 </head>
-<h1>{{item.name}}</h1>
 
+
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.w3-container.out{
+    padding-top: 3%;
+
+}
+</style>
 <body>
+<div class="w3-container out">
+  <div class="w3-card-4">
+    <header class="w3-container w3-light-blue">
+      <h1>{{item.name}}</h1>
+    </header>
 
+    <div class="w3-container">
+      <img src = {{item.image}} class = "center">
+    </div>
 
-<p>Category: {{item.description}}</p>
-<p>Price: ${{item.price}}</p>
-<img src = {{item.image}}>
+    <footer class="w3-container w3-light-blue">
+    <p></p>
+      <h2 style="text-align:center">Category: {{item.description}}</h2>
+      <h2 style="text-align:center">Price: ${{item.price}}</h2>
 
+    </footer>
+  </div>
+
+</div>
+</div>
 </body>
 </html>

@@ -46,9 +46,11 @@ def home_view(request,*args, **kwargs):
     return render(request, "home.html", context)
 
 def electronics_view(request,*args, **kwargs):
+    itemlist = Item.objects.filter(description = "produce")
     context = {
         "Category": "Electronics",
-        "Title": "Amazoff: Electronics Catalog"
+        "Title": "Amazoff: Electronics Catalog",
+        "list": itemlist,
     }
     return render(request, 'category.html', context)
 
