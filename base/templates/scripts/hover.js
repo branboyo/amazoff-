@@ -3,6 +3,7 @@ $(document).ready(function(){
 
     $("#{{num}}").hover(
         function(){
+
             sessionStorage.hovertime = 0;
             document.getElementById("result").innerHTML = sessionStorage.hovertime + " ms";
         
@@ -20,14 +21,13 @@ $(document).ready(function(){
 
             clearInterval(timer);
 
-            if (userData["{{itemid}}"]) {
-                userData["{{itemid}}"] = userData["{{itemid}}"]+ parseInt(sessionStorage.hovertime);
+            if (sessionStorage.hover{{itemid}}) {
+                sessionStorage.hover{{itemid}} = parseInt(sessionStorage.hover{{itemid}}) + parseInt(sessionStorage.hovertime);
             } else {
-                userData["{{itemid}}"] = 0;
-                userData["{{itemid}}"] = userData["{{itemid}}"]+ parseInt(sessionStorage.hovertime);
+                sessionStorage.hover{{itemid}} = parseInt(sessionStorage.hovertime);
             }
-            
-            document.getElementById("result").innerHTML = userData["{{itemid}}"];
+
+            document.getElementById("result").innerHTML = sessionStorage.hover{{itemid}};
         }
     );
 });
