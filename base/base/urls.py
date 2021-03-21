@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from pages import views
 from pages.views import home_view, electronics_view, groceries_view, furnitures_view, cleaning_products_view, office_supplies_view
+from items.views import item_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     path('cleaning_products/', cleaning_products_view),
     path('office_supplies/', office_supplies_view),
     path('groceries/', groceries_view),
+    path('item/<int:item_id>/', item_view),
 ]
