@@ -1,56 +1,18 @@
-
-
 <!DOCTYPE html>
 <html>
 <title>Amazoff: {{item.name}}</title>
 <head>
 {%include 'heading.html'%}
 {%include 'libraries.html'%}
-<style>
-.grid-container.details{
-
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto;
-
-    padding-top: 2%;
-    padding-bottom: 1.5%; 
-    padding-left: 9%;
-    width: 90%;
-
-}
-.grid-item.details {
-  text-align: center;
-  background-color: #add8e6
-}
-</style>
 </head>
-
+<h1>{{item.name}}</h1>
 
 <body>
-<div class="grid-container details">
-    <div class="grid-item details bg-primary"><h1>{{item.name}}</h1><p>
-    <div class="grid-item details"><img src = {{item.image}} height="40%" width="40%"></div>
-    <div class="grid-item details bg-primary">Category: {{item.description}}</p></div></div>
-    <div class="grid-item details bg-primary"><p>Price: ${{item.price}}</p></div>
-</div>
 
-<div class="w3-container">
-  <h2>Card Content</h2>
-  <p>Add containers inside the card to create different sections:</p>
 
-  <div class="w3-card-4" style="width:50%;">
-    <header class="w3-container w3-blue">
-      <h1>Header</h1>
-    </header>
-
-    <div class="w3-container">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-
-    <footer class="w3-container w3-blue">
-      <h5>Footer</h5>
-    </footer>
+<p>Category: {{item.description}}</p>
+<p>Price: ${{item.price}}</p>
+<img src = {{item.image}}>
 
 </body>
 </html>
