@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var timer;
 
-    $("#im1").hover(
+    $("#{{num}}").hover(
         function(){
             sessionStorage.hovertime = 0;
             document.getElementById("result").innerHTML = sessionStorage.hovertime + " ms";
