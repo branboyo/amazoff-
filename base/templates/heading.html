@@ -3,7 +3,7 @@
 <html>
 <head>
 <style>
-.grid-container {
+.grid-container.header {
     display: grid;
     grid-template-columns: 17.5% 17.5% 17.5% 17.5% 17.5%;
     grid-gap: 3%;
@@ -12,7 +12,7 @@
     padding-left: 9%;
     width: 90%;
 }
-.grid-container > div {
+.grid-container.header > div {
     background-color: #616161;
     text-align: center;
     padding: 5%; 
@@ -28,7 +28,7 @@ h1 {
     font-weight: bold;       
 }
 
-.grid-item:hover{
+.grid-item.header:hover{
     transform: scale(1.25); 
 }
 </style>
@@ -39,12 +39,12 @@ h1 {
         <h1 style="top-align: 50%;"><a href = '/' style = "text-decoration:none; color: white">Amazoff</a></h1>
         
     </div>
-    <div class="grid-container">
-        <div onclick="location.href='/electronics/';" style="cursor:pointer;" class="grid-item">Electronics</div>
-        <div onclick="location.href='/groceries/';" style="cursor:pointer;" class="grid-item">Groceries</div>
-        <div onclick="location.href='/furnitures/';" style="cursor:pointer;" class="grid-item">Furnitures</div>
-        <div onclick="location.href='/cleaning_products/';" style="cursor:pointer;" class="grid-item">Cleaning</div>
-        <div onclick="location.href='/office_supplies/';" style="cursor:pointer;" class="grid-item">Office</div>
+    <div class="grid-container header">
+        <div onclick="location.href='/electronics/';" style="cursor:pointer;" class="grid-item header">Electronics</div>
+        <div onclick="location.href='/groceries/';" style="cursor:pointer;" class="grid-item header">Groceries</div>
+        <div onclick="location.href='/furnitures/';" style="cursor:pointer;" class="grid-item header">Furnitures</div>
+        <div onclick="location.href='/cleaning_products/';" style="cursor:pointer;" class="grid-item header">Cleaning</div>
+        <div onclick="location.href='/office_supplies/';" style="cursor:pointer;" class="grid-item" header>Office</div>
     </div>
 
     <div>
