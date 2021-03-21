@@ -8,14 +8,26 @@ $(document).ready(function(){
         
             timer = setInterval(function(){
             if (sessionStorage.hovertime) {
-                sessionStorage.hovertime = Number(sessionStorage.hovertime) + .2;
+                sessionStorage.hovertime = Number(sessionStorage.hovertime) + 10;
             } else {
-                sessionStorage.hovertime = .2;
+                sessionStorage.hovertime = 10;
             }
             document.getElementById("result").innerHTML = sessionStorage.hovertime + " ms";
-            }, 200);
+            }, 10);
         }, 
 
-        function(){clearInterval(timer)}
+        function(){
+
+            clearInterval(timer);
+
+            if (userData["{{itemid}}"]) {
+                userData["{{itemid}}"] = userData["{{itemid}}"]+ parseInt(sessionStorage.hovertime);
+            } else {
+                userData["{{itemid}}"] = 0;
+                userData["{{itemid}}"] = userData["{{itemid}}"]+ parseInt(sessionStorage.hovertime);
+            }
+            
+            document.getElementById("result").innerHTML = userData["{{itemid}}"];
+        }
     );
 });
