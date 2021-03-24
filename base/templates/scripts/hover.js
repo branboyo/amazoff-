@@ -7,7 +7,8 @@ $(document).ready(function(){
         } else {
             sessionStorage.clicks{{itemid}} = 1;
         }
-        window.location.href = window.location.href.concat("item/{{itemid}}");
+        
+        window.location = "/item/{{itemid}}"
         document.getElementById("result").innerHTML = "You have clicked the button " 
                     + sessionStorage.clicks + " time(s) in this session.";
     }).hover(
