@@ -94,3 +94,10 @@ def bakery_view(request,*args, **kwargs):
         "list": itemlist,
     }
     return render(request, 'category.html', context)
+
+def checkout_view(request,*args, **kwargs):
+    
+    context = {
+        "session":sessionStorage,
+    }
+    return render(request, 'end.html', context)

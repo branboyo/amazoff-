@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from pages import views
-from pages.views import home_view, produce_view, meat_view, seafood_view, bakery_view, pantry_view
+from pages.views import home_view, produce_view, meat_view, seafood_view, bakery_view, pantry_view, checkout_view
 from items.views import item_view
 
 urlpatterns = [
@@ -28,4 +28,5 @@ urlpatterns = [
     path('seafood/', seafood_view),
     path('bakery/', bakery_view),
     path('item/<int:item_id>/', item_view),
+    path('checkout/', checkout_view),
 ]
