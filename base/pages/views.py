@@ -98,6 +98,6 @@ def bakery_view(request,*args, **kwargs):
 def checkout_view(request,*args, **kwargs):
     
     context = {
-        "session":sessionStorage,
+        "a":"a"
     }
     return render(request, 'end.html', context)
