@@ -8,7 +8,6 @@ $(document).ready(function(){
             sessionStorage.clicks{{itemid}} = 1;
         }
         
-        window.location = "/item/{{itemid}}"
         document.getElementById("result").innerHTML = "You have clicked the button " 
                     + sessionStorage.clicks{{itemid}} + " time(s) in this session.";
     }).hover(
