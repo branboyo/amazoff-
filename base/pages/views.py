@@ -1,10 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from items.models import Item
+import random
 
 # Create your views here.
 
 def home_view(request,*args, **kwargs):
+
+    idList = list(range(1,80))
+    random.shuffle(idList)
+
     context = {
         "item1": Item.objects.get(id=1),
         "item2": Item.objects.get(id=2),

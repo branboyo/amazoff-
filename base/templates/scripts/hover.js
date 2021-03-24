@@ -1,7 +1,16 @@
 $(document).ready(function(){
     var timer;
 
-    $("#{{num}}").hover(
+    $("#{{num}}").click(function(){
+        if(sessionStorage.clicks{{itemid}}){
+            sessionStorage.clicks{{itemid}} = Number(sessionStorage.clicks{{itemid}});
+        } else {
+            sessionStorage.clicks{{itemid}} = 1;
+        }
+        window.location.href = window.location.href.concat("item/{{itemid}}");
+        document.getElementById("result").innerHTML = "You have clicked the button " 
+                    + sessionStorage.clicks + " time(s) in this session.";
+    }).hover(
         function(){
 
             sessionStorage.hovertime = 0;
