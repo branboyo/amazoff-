@@ -10,7 +10,7 @@ $(document).ready(function(){
         
         window.location = "/item/{{itemid}}"
         document.getElementById("result").innerHTML = "You have clicked the button " 
-                    + sessionStorage.clicks + " time(s) in this session.";
+                    + sessionStorage.clicks{{itemid}} + " time(s) in this session.";
     }).hover(
         function(){
 
